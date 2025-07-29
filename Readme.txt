@@ -1,7 +1,10 @@
 Creat Azure Profile
 Install Azure ARM tools in local environment
 Creat the Json Files in a designated directory
-run and deploy the Azure environment: New-AzResourceGroupDeployment -Name RDP -ResourceGroupName sre-ank-08 -TemplateFile .\RDP.json -TemplateParameterFile .\RDP_Parameters.json
+run and deploy the Azure environment: 
+Connect-AzAccount
+New-AzResourceGroup -Name "MyResourceGroup" -Location "eastus"
+New-AzResourceGroupDeployment -Name RDP -ResourceGroupName sre-ank-08 -TemplateFile .\RDP.json -TemplateParameterFile .\RDP_Parameters.json
 
 (VM name mustnot contain any special characters)
 
