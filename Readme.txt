@@ -1,8 +1,10 @@
-Creat Azure Profile
-Install Azure ARM tools in local environment
-Creat the Json Files in a designated directory
+Note: This is my first Azure ARM templete project and below is the detailed Workflow i have described to creat a Virtual Machine using VS Code, Azure ARM tool, Powershell, JSON and Azure Subscription.
 
-run and deploy the Azure environment: 
+Creat Azure Profile over Microsoft Azure Portal
+Install Azure ARM tools in local environment (I have used Visual Studio code)
+Creat and save the Json Files in a designated directory
+
+run and deploy the Azure environment using Powershell: 
 Connect-AzAccount
 New-AzResourceGroup -Name "MyResourceGroup" -Location "eastus"
 New-AzResourceGroupDeployment -Name RDP -ResourceGroupName sre-ank-08 -TemplateFile .\RDP.json -TemplateParameterFile .\RDP_Parameters.json
